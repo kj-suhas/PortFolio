@@ -54,6 +54,18 @@ $('#contacts').on('click', () => {
 	);
 });
 
+$('#homes').on('click', () => {
+	const about = $('#home').position().top;
+
+	$('html, body').animate(
+		{
+			scrollTop: about
+		},
+		900
+	);
+});
+
+
 
 
 
@@ -110,6 +122,20 @@ $('#contacts').on('click', () => {
 //   setTimeout(() => this.type(), typeSpeed);
 // }
 
+const menu_item = document.querySelectorAll('.menu ul a');
+const hamburger = document.querySelector('.toggler');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+})
+
+menu_item.forEach(item => {
+  item.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+
+
+  })
+})
 
 // ES6 Class
 class TypeWriter {
